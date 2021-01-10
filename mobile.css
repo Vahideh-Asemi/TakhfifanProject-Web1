@@ -1,0 +1,582 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    box-sizing: border-box;
+}
+
+body {
+    line-height:1;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+@font-face {
+    font-family: myFont;
+    src: url(Samim.ttf);
+}
+span, li, input {
+    font-family: myFont;
+    /* white-space: nowrap; */
+    flex-shrink: 0;
+}
+header {
+    width: 100%;
+    display: block;
+    height: 170px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+header .first-line {
+    display: none;
+}
+
+header .second-line {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    background-color: white;
+}
+header .second-line .right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+header .second-line .right .menubar {
+    display: flex;
+    width: 20%;
+    font-size: 35px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+header .second-line .right .logo {
+    width: 80%;
+    height: 100%;
+}
+header .second-line .right .logo img {
+    width: 90%;
+    height: 100%;
+    margin-right: 10px;
+    object-fit: contain;
+}
+header .second-line .right .search {
+    display: none;
+}
+
+header .second-line .left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+header .second-line .left .empty {
+    width: 30%;
+    height: 100%;
+}
+header .second-line .left .sign-in {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+header .second-line .left .sign-in .sign-in-content {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+header .second-line .left .sign-in .sign-in-content .search-icon {
+    width: 40%;
+    color: rgb(94, 92, 92);
+    display: flex;
+    font-size: 40px;
+    justify-content: flex-end;
+}
+header .second-line .left .sign-in .sign-in-content .user {
+    display: none;
+}
+header .second-line .left .sign-in .sign-in-content .khat {
+    display: none;
+}
+header .second-line .left .sign-in .sign-in-content .basket {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    font-size: 50px;
+    color: #4f4f4f;
+}
+header .second-line .left .sign-in .sign-in-content .basket i {
+    margin-top: -5px;
+}
+
+header .third-line {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    background-color: #f5f5f5;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.15);
+}
+header .third-line .right {
+    display: none;
+}
+header .third-line .left {
+    display: none;
+}
+header .third-line .emptyforlap-listforphon {
+    width: 100%;
+    height: 100%;
+}
+header .third-line .emptyforlap-listforphon .list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+header .third-line .emptyforlap-listforphon .list ul {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    white-space: nowrap;
+    overflow: scroll;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-right: 108px;
+}
+header .third-line .emptyforlap-listforphon .list ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+header .third-line .emptyforlap-listforphon .list ul li i {
+    padding-left: 10px;
+}
+
+.fram {
+    width: 100%;
+    background-color: transparent;
+    display: block;
+}
+
+.fram .main {
+    width: 100%;
+}
+.fram .main .container {
+    display: none;
+}
+.fram .main img {
+    width: 100%;
+    height: 99%;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 20px;
+    padding-top: 0px;
+}
+
+.fram .pezeshki {
+    width: 100%;
+} 
+.fram .pezeshki .container {
+    width: 100%;
+    background-color: #fff;
+    display: block;
+}
+.fram .pezeshki .container >div {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    background-color: transparent;
+    justify-content: space-around;
+}
+
+.fram .pezeshki .container .middle {
+    display: none;
+}
+
+.fram .pezeshki .container .hese-khub {
+    width: 100%;
+    display: flex;
+    background-color: #459efa !important;
+    padding: 15px;
+    border: none;
+    outline: none;
+}
+.fram .pezeshki .container .hese-khub >div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    background-color: transparent;
+}
+.fram .pezeshki .container .hese-khub .right span {
+    color: white;
+}
+.fram .pezeshki .container .hese-khub .left {
+    display: flex;
+    justify-content: left;
+}
+.fram .pezeshki .container .hese-khub .left >div {
+    background-color: #459efa;
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    padding-right: 60px;
+}
+.fram .pezeshki .container .hese-khub .left >div span {
+    color: white;
+}
+.fram .pezeshki .container .hese-khub .left >div i {
+    color: white;
+}
+
+
+
+.fram .pezeshki .container .top {
+    width: 100%;
+    display: flex;
+    background-color: #459efa;
+    flex-wrap: wrap;
+}
+.fram .pezeshki .container .top >div {
+    width: 45%;
+    overflow: scroll;
+    border-radius: 5px;
+    border: solid 1px #dcdcdc;
+    position: relative;
+    background-color: white;
+    margin: 10px;
+}
+.fram .pezeshki .container .top .top-item-pezeshki img {
+    width: 100%;
+    height: 100%;
+}
+.fram .pezeshki .container .top .view-all {
+    display: none;
+}
+.fram .pezeshki .container .top .top-item-pezeshki >div {
+    margin-bottom: 10px;
+}
+.fram .pezeshki .container .top .top-item-pezeshki span {
+    color: #3c3c3c;
+    font-size: 14px;
+}
+.fram .pezeshki .container .top .top-item-pezeshki .price {
+    text-align: left;
+    padding-left: 10px;
+}
+.fram .pezeshki .container .top .top-item-pezeshki .price .ghabli {
+    color: #8c8c8c !important;
+    text-decoration: line-through;
+}
+.fram .pezeshki .container .top .top-item-pezeshki .price span {
+    text-align: left;
+    color: #49c668;
+}
+.fram .pezeshki .container .top .top-item-pezeshki .takhfif {
+    background-color: #ff5a5f;
+    color: white;
+    position: absolute;
+    font-size: 18px;
+    top: 0;
+    border-radius: 0 0 0 5px;
+    padding: 5px;
+}
+
+
+.fram .pezeshki .container .restaurant {
+    display: flex;
+    background-color: transparent;
+}
+.fram .pezeshki .container .restaurant >div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    background-color: transparent;
+}
+.fram .pezeshki .container .restaurant .right span {
+    color: grey;
+    font-weight: 500;
+    font-size: 14px;
+    padding-top: 8px;
+    padding-right: 10px;
+}
+.fram .pezeshki .container .restaurant .left {
+    justify-content: left;
+}
+.fram .pezeshki .container .restaurant .left >div {
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    padding-right: 60px;
+    justify-content: space-around;
+}
+.fram .pezeshki .container .restaurant .left >div span,i {
+    color: grey;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+
+.fram .pezeshki .container .bottom {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.fram .pezeshki .container .bottom >div {
+    width: 45%;
+    display: block;
+    border-radius: 5px;
+    border: solid 1px #dcdcdc;
+    position: relative;
+    overflow: scroll;
+    margin: 10px;
+
+}
+.fram .pezeshki .container .bottom .bottom-item-pezeshki >div {
+    margin-bottom: 20px;
+}
+.fram .pezeshki .container .bottom .bottom-item-pezeshki span {
+    color: #3c3c3c;
+    font-size: 10px;
+}
+.fram .pezeshki .container .bottom .bottom-item-pezeshki .titr {
+    font-weight: 500;
+    text-align: center;
+}
+.fram .pezeshki .container .bottom .bottom-item-pezeshki .kharid {
+    display: flex;
+    justify-content: center;
+}
+.fram .pezeshki .container .bottom .bottom-item-pezeshki .price {
+    text-align: left;
+    padding-left: 10px;
+}
+.fram .pezeshki .container .bottom .bottom-item-pezeshki .price .ghabli {
+    color: #8c8c8c !important;
+    text-decoration: line-through;
+}
+.fram .pezeshki .container .bottom .bottom-item-pezeshki .price span{
+    text-align: left;
+    color: #49c668;
+}
+.fram .pezeshki .container .bottom .bottom-item-pezeshki img {
+    width: 100%;
+    height: 100%;
+}
+.fram .pezeshki .container .bottom .bottom-item-pezeshki .takhfif {
+    background-color: #ff5a5f;
+    color: white;
+    position: absolute;
+    font-size: 10px;
+    top: 0;
+    border-radius: 0 0 0 5px;
+    padding: 3px;
+}
+
+
+.fram .Theme-Yalda  {
+    width: 100%;
+}
+.fram .Theme-Yalda .container {
+    width: 100%;
+    display: flex;
+    background-color: transparent;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.fram .Theme-Yalda .container >div {
+    width: 50%;
+    border-radius: 5px;
+    background-color: transparent;
+    position: relative;
+    padding: 10px;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+.fram .Theme-Yalda .container div img {
+    width: 100%;
+    height: 100%;
+}
+
+.fram .mix {
+    width: 100%;
+    background-color: white;
+}
+.fram .mix .texts {
+    width: 100%;
+}
+.fram .mix .texts .pas {
+    color: #3c3c3c;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    padding-top: 25px;
+}
+.fram .mix .texts .naghd {
+    color: #3c3c3c;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    padding-bottom: 25px;
+}
+.fram .mix .texts .naghd span {
+    white-space: pre-wrap !important;
+    font-size: 10px;
+    flex-shrink: 2;
+    line-height: 20px;
+}
+
+.fram .mix .allboxs {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+.fram .mix .allboxs .box {
+    border: solid 1px #dcdcdc;
+    background-color: #fff;
+    width: 49%;
+    border-radius: 5px;
+    position: relative;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    padding-top: 15px;
+}
+.fram .mix .allboxs .box .morabae {
+    height: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+.fram .mix .allboxs .box .morabae img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.fram .mix .allboxs .box .title, .darsad {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.fram .mix .allboxs .box .title span {
+    color: #646464;
+    font-size: 10px;
+}
+.fram .mix .allboxs .box .darsad span {
+    color: #3c3c3c;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+.fram .mix .moshahede {
+    display: none;
+} 
+
+.fram .khanevade {
+    display: none;   
+}
+
+.last-pic-phone {
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 30px;
+}
+.last-pic-phone img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+footer {
+    display: none;
+}
